@@ -1,0 +1,12 @@
+# Define a tuple with the names of five favorite books
+favorite_books = (
+    "To Kill a Mockingbird",
+    "1984",
+    "The Great Gatsby",
+    "One Hundred Years of Solitude",
+    "Pride and Prejudice"
+)
+
+# Use a for loop to print each book name on a separate line
+for book in favorite_books:
+    print(book)
