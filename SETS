@@ -1,0 +1,26 @@
+def input_set(prompt):
+    """Helper function to input a set of integers from the user."""
+    while True:
+        try:
+            # Prompt the user to enter integers separated by spaces
+            user_input = input(prompt)
+            # Convert the input string into a list of integers
+            int_list = list(map(int, user_input.split()))
+            # Convert the list into a set
+            return set(int_list)
+        except ValueError:
+            print("Invalid input. Please enter a list of integers separated by spaces.")
+
+def main():
+    # Get two sets of integers from the user
+    set1 = input_set("Enter the integers for the first set, separated by spaces: ")
+    set2 = input_set("Enter the integers for the second set, separated by spaces: ")
+    
+    # Compute the intersection of the two sets
+    common_elements = set1.intersection(set2)
+    
+    # Print the result
+    print("The common elements in both sets are:", common_elements)
+
+if __name__ == "__main__":
+    main()
