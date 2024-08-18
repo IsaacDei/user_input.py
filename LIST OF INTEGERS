@@ -1,0 +1,28 @@
+def main():
+    # Initialize an empty list to store integers
+    numbers = []
+    
+    print("Enter integers to add to the list. Type 'done' when you are finished.")
+    
+    while True:
+        user_input = input("Enter an integer: ")
+        
+        if user_input.lower() == 'done':
+            break
+        
+        try:
+            # Convert the input to an integer
+            number = int(user_input)
+            # Append the integer to the list
+            numbers.append(number)
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+    
+    # Calculate the sum of the list
+    total_sum = sum(numbers)
+    
+    # Display the result
+    print(f"The sum of the integers in the list is: {total_sum}")
+
+if __name__ == "__main__":
+    main()
